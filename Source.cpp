@@ -4,15 +4,15 @@
 
 std::string name;
 std::string path;
-char content[1000];
+std::string content;
 int makeAFileIn()
 {
 	std::cout << "\nType name of text file: ";
-	std::cin >> name;
+	std::getline(std::cin, name);
 	std::cout << "\nPath for the file. If blank it will be in C: -> Documents -> Text Files. Insert: ";
-	std::cin >> path;
+	std::getline(std::cin, path);
 	std::cout << "\nContent of file: ";
-	std::cin >> content;
+	std::getline(std::cin, content);
 	if (path == "") {
 		path = "C:/Users/123/Documents/Text_files";
 	}
